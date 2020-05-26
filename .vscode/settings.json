@@ -1,0 +1,12 @@
+{
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "prettier.disableLanguages": ["scss"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  }
+}
