@@ -6,6 +6,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
   styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent implements OnInit {
+  @HostBinding('class') className = 'layout-default';
   constructor() {}
 
   ngOnInit(): void {}
