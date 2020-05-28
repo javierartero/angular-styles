@@ -1,0 +1,25 @@
+
+$spacer: 1rem !default;
+
+$container-max-widths: (
+  'xs': 500px,
+  'sm': 746px,
+  'md': 1134px,
+  'lg': 1442px,
+  'xl': 100%
+);
+
+$grid-breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px,
+  xxl: 1600px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+@forward '~bootstrap/scss/mixins/grid';
+@forward '~bootstrap/scss/mixins/breakpoints';
