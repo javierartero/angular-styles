@@ -1,0 +1,49 @@
+// stylelint-disable declaration-no-important
+$utility-sizes: (
+  'auto': auto,
+  '0': 0,
+  '100': 100%,
+  '75': 75%,
+  '50': 50%,
+  '25': 25%
+) !default;
+
+$utility-width: ($utility-sizes) !default;
+
+@each $name, $property in $utility-width {
+  .w-#{$name} {
+    width: $property !important;
+  }
+}
+
+$utility-height: ($utility-sizes) !default;
+
+@each $name, $property in $utility-height {
+  .h-#{$name} {
+    height: $property !important;
+  }
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+
+.mh-100 {
+  max-height: 100% !important;
+}
+
+.min-vw-100 {
+  min-width: 100vw !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh !important;
+}
+
+.vw-100 {
+  width: 100vw !important;
+}
+
+.vh-100 {
+  height: 100vh !important;
+}

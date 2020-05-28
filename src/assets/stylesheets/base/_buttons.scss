@@ -1,0 +1,36 @@
+@use '../core/' as *;
+@use 'sass:color';
+
+// BEP INITIAL
+%btn {
+  display: inline-flex;
+  padding: var(--btn--padding, #{$component-padding});
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--btn--color, inherit);
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: var(--btn--bg, transparent);
+  border: var(--btn--border, 2px solid transparent);
+
+  &:hover,
+  &:focus {
+    color: var(--btn__hover--color, inherit);
+    background-color: var(--btn__hover--bg, --btn--bg);
+  }
+}
+
+//BEP EXTEND
+.btn-primary,
+%btn-primary {
+  $light: color.adjust($primary, $lightness: 20%);
+
+  --btn--color: var(--btn-primary--color, $white);
+  --btn__hover--color: var(--btn-primary__hover--color, $white);
+  --btn--bg: var(--btn-primary--bg, $primary);
+  --btn__hover--bg: var(--btn-primary__hover--bg, $light);
+  @extend %btn;
+}

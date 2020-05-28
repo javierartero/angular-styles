@@ -1,0 +1,19 @@
+// stylelint-disable declaration-no-important
+$utility-displays: (
+  'none': none,
+  'inline': inline,
+  'inline-block': inline-block,
+  'block': block,
+  'table': table,
+  'grid': grid,
+  'table-cell': table-cell,
+  'table-row': table-row,
+  'flex': flex,
+  'inline-flex': inline-flex
+) !default;
+
+@each $name, $property in $utility-displays {
+  .d-#{$name} {
+    display: $property !important;
+  }
+}

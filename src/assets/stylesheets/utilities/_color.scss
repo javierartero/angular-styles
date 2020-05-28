@@ -1,0 +1,20 @@
+// stylelint-disable declaration-no-important
+@use '../core/' as *;
+
+$utility-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'black': $black,
+  'white': $white,
+  'black-50': rgba($black, .5)
+) !default;
+
+@each $name, $color in $utility-colors {
+  .color-#{$name} {
+    color: $color !important;
+  }
+
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}

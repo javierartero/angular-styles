@@ -1,0 +1,33 @@
+@use 'variables' as *;
+@use 'bootstrap';
+
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $size, $width in bootstrap.$container-max-widths {
+  %container-#{$size} {
+    max-width: $width;
+    @extend %container;
+  }
+}
+
+%container-fluid {
+  @include bootstrap.make-container($gutter);
+}
+
+%row {
+  @include bootstrap.make-row($gutter);
+}
+
+%col-ready {
+  @include bootstrap.make-col-ready($gutter);
+}

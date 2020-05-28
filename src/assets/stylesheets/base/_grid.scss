@@ -1,0 +1,34 @@
+$grid-breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px,
+  xxl: 1600px
+);
+
+%container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $size, $width in $containers {
+  .container-#{$size},
+  %container-#{$size} {
+    max-width: $width;
+    @extend %container;
+  }
+}
+
+%container-fluid {
+  @include make-container();
+}
+
+%row {
+  @include make-row();
+}
+
+%col-ready {
+  @include make-col-ready();
+}

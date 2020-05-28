@@ -1,0 +1,12 @@
+@use 'core' as *;
+
+:root {
+  --h1--font-size: 1.875rem;
+  --h2--font-size: 1.5rem;
+  --h3--font-size: 1.25rem;
+  --font-primary--color: #{$gray-600};
+  --font-secondary--color: #{$gray-300};
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --color-link: #{$blue};
+}

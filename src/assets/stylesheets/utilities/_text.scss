@@ -1,0 +1,60 @@
+// stylelint-disable declaration-no-important
+@use '../core/' as *;
+
+$utility-aligns: (
+  'left': left,
+  'right': right,
+  'center': center,
+  'justify': justify
+) !default;
+
+@each $name, $align in $utility-aligns {
+  .text-#{$name} {
+    text-align: $align !important;
+  }
+}
+
+$utility-font-weight: (
+  'bold': $font-weight-bold,
+  'semibold': $font-weight-semibold,
+  'bolder': $font-weight-semibold,
+  'normal': $font-weight-normal,
+  'light': $font-weight-light
+) !default;
+
+@each $name, $weight in $utility-font-weight {
+  .font-weight-#{$name} {
+    font-weight: $weight !important;
+  }
+}
+
+$utility-font-sizes: (
+  'xs': var(--font-size-xs),
+  'sm': var(--font-size-sm),
+  'base': var(--font-size-base),
+  'lg': var(--font-size-lg)
+) !default;
+
+@each $name, $size in $utility-font-sizes {
+  .font-size-#{$name} {
+    font-size: $size !important;
+  }
+}
+
+$utility-text-transform: (lowercase, capitalize) !default;
+
+@each $name in $utility-text-transform {
+  .text-transform-#{$name} {
+    text-transform: $name !important;
+  }
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

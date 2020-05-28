@@ -1,0 +1,69 @@
+//--- vars-colors
+$white: #fff;
+$gray-100: #f6f6f6;
+$gray-200: #e3dddd;
+$gray-300: #aaa;
+$gray-400: #9c9ea0;
+$gray-500: #707070;
+$gray-600: #5f6264;
+$gray-700: #333;
+$gray-800: #232323;
+$gray-900: #212529;
+$black: #000;
+
+$blue: #2979ff;
+$dark-blue: #203a8f;
+$indigo: #6610f2;
+$purple: #b2abff;
+$pink: #f0589e;
+$red: #ed3c50;
+$orange: #fd7e14;
+$yellow: #f6a800;
+$green: #38e560;
+$cyan: #00bfd9;
+$gray: #f8f8fa;
+
+$primary: $dark-blue;
+$secondary: $gray-700;
+$success: #57bc27;
+$warning: $red;
+$danger: $red;
+$lightened: rgba(255, 255, 255, .5);
+$darkened: rgba(0, 0, 0, .5);
+
+//--- vars-fonts
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-family-primary: sans-serif;
+$font-family-secondary: $font-family-primary;
+
+$gutter: 30px;
+
+$nav-bar-size: 60px;
+
+$spacers: (
+  0: 0,
+  1: .5rem,
+  2: 1rem,
+  3: 1.5rem,
+  4: 2rem,
+  5: 3rem,
+  6: 5rem
+);
+
+$component-padding: .5rem 1rem;
+$component-line-height: 1.5rem;
+
+$z-index: (
+  'loading': 400,
+  'modal': 300,
+  'actions': 300,
+  'search': 200,
+  'header': 100,
+  'relative': 1,
+  'default': 0
+);

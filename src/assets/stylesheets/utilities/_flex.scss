@@ -1,0 +1,136 @@
+// stylelint-disable declaration-no-important
+
+// Direction
+$utility-flex-direction: (
+  'row': row,
+  'row-reverse': row-reverse,
+  'column': column,
+  'column-reverse': column-reverse
+) !default;
+
+@each $name, $property in $utility-flex-direction {
+  .flex-#{$name} {
+    flex-direction: $property !important;
+  }
+}
+
+// Justify content
+$utility-justify-content: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'between': space-between,
+  'around': space-around
+) !default;
+
+@each $name, $property in $utility-justify-content {
+  .justify-content-#{$name} {
+    justify-content: $property !important;
+  }
+}
+
+// Align items
+$utility-align-items: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'baseline': baseline
+) !default;
+
+@each $name, $property in $utility-align-items {
+  .align-items-#{$name} {
+    align-items: $property !important;
+  }
+}
+
+// Align self
+$utility-align-self: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'baseline': baseline,
+  'stretch': stretch
+) !default;
+
+@each $name, $property in $utility-align-self {
+  .align-self-#{$name} {
+    align-self: $property !important;
+  }
+}
+
+// Justify self
+$utility-justify-self: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'baseline': baseline,
+  'stretch': stretch
+) !default;
+
+@each $name, $property in $utility-justify-self {
+  .justify-self-#{$name} {
+    justify-self: $property !important;
+  }
+}
+
+// Align content
+$utility-align-items: (
+  'start': flex-start,
+  'end': flex-end,
+  'center': center,
+  'between': space-between,
+  'around': space-around,
+  'stretch': stretch
+) !default;
+
+@each $name, $property in $utility-align-items {
+  .align-content-#{$name} {
+    align-content: $property !important;
+  }
+}
+
+// Wrap
+$utility-flex-wrap: (
+  'wrap': wrap,
+  'nowrap': nowrap,
+  'wrap-reverse': wrap-reverse
+) !default;
+
+@each $name, $property in $utility-flex-wrap {
+  .flex-#{$name} {
+    flex-wrap: $property !important;
+  }
+}
+
+// Fill
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+// Flex Grow
+$utility-flex-grow: 12 !default;
+
+@for $i from 0 through $utility-flex-grow {
+  .flex-#{$i},
+  .flex-grow-#{$i} {
+    flex-grow: $i !important;
+  }
+}
+
+// Flex shrink
+$utility-flex-shrink: 1 !default;
+
+@for $i from 0 through $utility-flex-shrink {
+  .flex-shrink-#{$i} {
+    flex-shrink: $i !important;
+  }
+}
+
+// Order
+$utility-order: 12 !default;
+
+@for $i from 1 through $utility-order {
+  .order-#{$i} {
+    order: $i !important;
+  }
+}

@@ -1,0 +1,9 @@
+@function form-item-required($color: #F6A800) {
+  $color: str-replace(inspect($color), '#', '%23'); //fix and replace hexcolor
+  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Ccircle cx='4' cy='4' r='4' fill='"+$color+"' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+@function select-caret-down($color: #F6A800) {
+  $color: str-replace(inspect($color), '#', '%23'); //fix and replace hexcolor
+  @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='11' viewBox='0 0 16 11'%3E%3Cpath fill='"+$color+"' fill-rule='evenodd' d='M14.12.59L8 6.697 1.88.59 0 2.47l8 8 8-8z'/%3E%3C/svg%3E");
+}

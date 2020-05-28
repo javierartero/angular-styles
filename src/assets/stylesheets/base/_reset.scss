@@ -1,0 +1,144 @@
+@use '../core/' as *;
+
+%reset-common {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+%reset {
+  @extend %reset-common;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+%reset-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+%reset-button {
+  @extend %reset;
+  font-size: 100%;
+  text-align: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}
+
+%reset-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+%reset-checks {
+  cursor: pointer;
+}
+
+%reset-all {
+  * {
+    @extend %reset;
+  }
+
+  ul,
+  dl {
+    @extend %reset-list;
+  }
+
+  a {
+    @extend %reset-link;
+  }
+
+  button {
+    @extend %reset-button;
+  }
+}
+
+*,
+*::before,
+*::after {
+  @extend %reset-common;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  font-family: $font-family-primary;
+  font-size: var(--font-size-base);
+  font-weight: $font-weight-normal;
+  line-height: 1.5;
+  color: var(--font-color);
+  background: var(--background);
+}
+
+app-root { /* stylelint-disable-line */
+  display: block;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address {
+  @extend %reset;
+}
+
+ul,
+dl {
+  @extend %reset-list;
+}
+
+a {
+  @extend %reset-link;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  @extend %reset-button;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
