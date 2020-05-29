@@ -5,7 +5,7 @@
   $padding-items: .5rem;
   display: flex;
   padding: $gutter/2;
-  color: var(--nav-bar--bg, #{$white});
+  color: var(--nav-bar--color, #{$white});
   background-color: var(--nav-bar--bg, #{$primary});
 
   &__item {

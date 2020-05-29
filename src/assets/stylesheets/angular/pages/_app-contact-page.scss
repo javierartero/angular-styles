@@ -1,0 +1,16 @@
+@use '../../core/' as *;
+
+app-contact-page { /* stylelint-disable-line */
+  --nav-bar--bg: #{$white};
+  --nav-bar--color: #{$primary};
+  --nav-bar__btn--color: #{$white};
+  --nav-bar__btn--bg: #{$primary};
+
+  &.layout-default {
+    grid-template-rows: 1fr auto;
+  }
+
+  .nav-menu {
+    grid-row: 2;
+  }
+}
