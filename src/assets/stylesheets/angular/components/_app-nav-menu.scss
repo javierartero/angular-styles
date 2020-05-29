@@ -1,0 +1,24 @@
+@use '../../core/' as *;
+@use '../../base/buttons' as *;
+
+.nav-menu {
+  $padding-items: .5rem;
+  display: flex;
+  padding: $gutter/2;
+  color: var(--nav-bar--bg, #{$white});
+  background-color: var(--nav-bar--bg, #{$primary});
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: $padding-items;
+  }
+
+  &__btn {
+    --btn--color: var(--nav-bar__btn--color, #{$primary});
+    --btn--bg: var(--nav-bar__btn--bg, #{$white});
+    --btn--padding: #{$padding-items};
+    @extend %btn;
+    margin-left: auto;
+  }
+}
